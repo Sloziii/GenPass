@@ -343,7 +343,7 @@ def page(string):
     print(Colorate.Horizontal(Colors.red_to_purple, 'Program Version ➟ ' + str(programVersion), 1))
     print(Colorate.Horizontal(Colors.red_to_purple, "Program maintened ➟ Yes", 1))
     print()
-    print(Colorate.Horizontal(Colors.red_to_purple, 'GitHub ➟ https://github.com/Sloziii/GenPass/blob/dev1.0.1/GenPass.py', 1))
+    print(Colorate.Horizontal(Colors.red_to_purple, 'GitHub ➟ https://github.com/Sloziii/GenPass', 1))
     print()
     print(Colorate.Horizontal(Colors.red_to_purple, '⤵ Here are the commands that you can execute to use GenPass ⤵'))
     print(Colorate.Horizontal(Colors.red_to_purple, Box.SimpleCube('➔ Create a new password [pswd create]\n➔ Delete a password [pswd delete]\n➔ Change a password [pswd modify]\n➔ List of current passwords [pswd list]\n➔ Backup the GenPass folder to another location [backup create]\n➔ Load a GenPass backup folder [backup load]\n➔ Delete a GenPass backup folder [backup delete]\n➔ Reload a GenPass backup folder [backup reload]\n➔ GenPass folder path [path]\n➔ Exit GenPass [exit]\n➔ Clear [clear]\n'), 1))
@@ -361,15 +361,6 @@ def installationVerification():
     except FileNotFoundError:
       os.mkdir('GenPass')
       os.chdir(documents + 'GenPass/')
-      page('home')
-  # For Windows users
-  else : 
-    if (platform.system() == 'Windows'):
-      documents = 'C:/'
-      # For MacOS users
-    #else :
-
-    
-      
+      page('home')    
   
 installationVerification()
